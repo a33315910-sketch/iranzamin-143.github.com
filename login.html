@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ورود به سایت </title>
+</head>
+
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4B4B55, #4B4B55, #4B4B55);
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+
+
+    <div id="stars-container"></div>
+    <div class="glass-container" id="mainContainer">
+        <div id="formSection">
+            <h2>خوش آمدید</h2>
+            <p class="subtitle">لطفاً برای ادامه وارد حساب کاربری خود شوید</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" placeholder="ایمیل یا نام کاربری" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="رمز عبور" required>
+                </div>
+
+                <button type="submit" class="btn-login">ورود به حساب</button>
+            </form>
+
+            <div class="register-link">
+                حساب کاربری ندارید؟ <a href="regester.html">ثبت نام کنید</a><br><br>
+                <a href="index.html">بازگشت به خانه</a>
+            </div>
+        </div>
+
+        <div id="successSection" class="success-message">
+            <div class="success-icon">✔</div>
+            <div class="success-text">ورود موفقیت‌آمیز!</div>
+            <div class="register-link">
+            <a href="index.html">بازگشت به خانه</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

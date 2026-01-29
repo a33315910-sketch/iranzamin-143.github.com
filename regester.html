@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ثبت نام در سایت</title>
+
+</head>
+
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4B4B55, #4B4B55, #4B4B55);
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+        }
+    </style>
+
+    <div id="stars-container"></div>
+    <div class="glass-container" id="mainContainer">
+        <div id="formSection">
+            <h2>عضویت در سایت</h2>
+            <p class="subtitle">لطفاً اطلاعات خود را برای ثبت نام وارد کنید</p>
+
+            <form id="registerForm">
+                <div class="input-group">
+                    <input type="text" placeholder="نام و نام خانوادگی" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="ایمیل" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="رمز عبور" required>
+                </div>
+
+
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> مرا به خاطر بسپار
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-register">ثبت نام</button>
+            </form>
+
+            <div class="login-link">
+                قبلاً ثبت نام کرده‌اید؟ <a href="login.html">وارد شوید</a><br><br>
+                <a href="index.html">بازگشت به خانه</a>
+            </div>
+        </div>
+
+        <div id="successSection" class="success-message">
+            <div class="success-icon">✔</div>
+            <div class="success-text">ثبت نام موفقیت‌آمیز!</div>
+            <div class="success-subtext">خوش آمدید، حساب کاربری شما ایجاد شد.</div>
+            <div class="login-link">
+                 <a href="index.html">بازگشت به خانه</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

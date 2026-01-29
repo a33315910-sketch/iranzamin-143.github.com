@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ایران زمین</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  </div>
+  <div id="stars-container"></div>
+  <div class="bac">
+    <header class="header">
+      <div class="logo"><img src="BackgroundEraser_20260122_194349795.png" alt="لوگو" width="70px"></div>
+      <div class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul class="menu" id="mainMenu">
+          <li><a href="#home">خانه</a></li>
+
+          <div class="dropdown2">
+            <button onclick="toggleMenu2()" class="dropbtn2">
+              <span class="desktop-text">ایران گردی &#9662;</span>
+              <span class="mobile-text"><a href="#jazebe">جاذبه ها</a></span>
+            </button>
+
+            <div id="myDropdown2" class="dropdown-content2">
+              <a href="city.html#takht">تخت جمشید</a>
+              <a href="city.html#chogazanbil">چغازنبیل</a>
+              <a href="city.html#asyab">آسیاب های آبی شوش</a>
+              <a href="city.html#nahshjahan">میدان نقش جهان</a>
+              <a href="city.html#takhtsolyman">تخت سلیمان</a>
+              <a href="city.html#bam">ارگ بم</a>
+              <a href="city.html#pasargad">پاسارگاد</a>
+              <a href="city.html#rajab">رجب و نقش رستم</a>
+              <a href="city.html#soltaniyeh">گنبد سلطانیه</a>
+              <a href="city.html#biston">بیستون</a>
+              <a href="city.html#safi">آرامگاه شیخ صفی</a>
+              <a href="city.html#bagshazdeh">باغ شازده ماهان</a>
+              <a href="city.html#masjedjame">مسجد جامع اصفهان</a>
+              <a href="city.html#kavos">برج گنبد کاووس</a>
+              <a href="city.html#googleapis">کاخ گلستان</a>
+              <a href="city.html#firozabad">فیروز آباد فارس</a>
+              <a href="city.html#jangel">جنگل های هیرکانی</a>
+              <a href="city.html#oramant">اورامانت</a>
+              <a href="city.html#sokhte">شهر شوخته</a>
+              <a href="city.html#mimand">میمند</a><br>
+            </div>
+
+          </div>
+          <div class="dropdown">
+            <button onclick="toggleMenu()" class="dropbtn">
+              <span class="desktop-text"> دسته بندی ها &#9662;</span>
+              <span class="mobile-text"><a href="#dastebandy">دسته بندی ها</a></span>
+            </button>
+
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#hostabri">فرهنگ و مردم </a>
+              <a href="#seerverabri">تاریخ ایران</a>
+              <a href="#serverekhtesasi">هنر و ادبیات</a>
+              <a href="#sayermahsolat">ایران امروز</a>
+            </div>
+          </div>
+
+          <li><a href="about.html">درباره ما</a></li>
+          <li><a href="regester.html">ثبت نام/ورود</a></li>
+        </ul>
+      </nav>
+      <a href="#map" class="map">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+          <line x1="8" y1="2" x2="8" y2="18"></line>
+          <line x1="16" y1="6" x2="16" y2="22"></line>
+        </svg>
+        نقشه ایران
+      </a>
+    </header>
+
+    <main id="home">
+      <h1 class="welcome fade-in-up">به سایت ایران زمین خوش آمدید <img src="borg.png" alt="برج آزادی" class="azadi-img"></h1>
+      
+      <div class="search-box fade-in-up">
+
+        <input id="searchinput" type="text" placeholder="جستجوی مکان‌های دیدنی ایران..." class="fade-in-up">
+        <svg class="svg" id="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #888; cursor: pointer; z-index: 10;">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+
+      <div class="bord">
+        <h1 class="border1 fade-in-up">
+          ایران زمین
+          <br>سایتی برای کشف زیبایی‌های بی‌نظیر ایران.
+          <br>از کوه‌های سر به فلک کشیده تا دریاچه‌های آرام و شهرهای تاریخی،
+          <br>هر مکان دیدنی را با عکس‌ها و توضیحات کامل معرفی می‌کنیم
+          <br>تا تجربه‌ای واقعی از سفر در ایران داشته باشید.
+          <br><a href="about.html" class="more1-bookmark">مشاهده بیشتر</a>
+        </h1>
+
+        <p class="border2 fade-in-up">
+          از شمال تا جنوب، از شرق تا غرب، ایران پر از شگفتی است.
+          <br>مکان‌های تاریخی، طبیعت بکر و شهرهای دیدنی را کشف کنید
+          <br>و سفری فراموش‌نشدنی را تجربه کنید.
+          <br>ایران سرشار از شگفتی است که هر گوشه اش<br> روایتی جاودانه را در دل خود نگه داشته است.
+          <br><a href="about.html" class="more2-bookmark">مشاهده بیشتر</a>
+        </p>
+      </div>
+    </main>
+
+    <div id="dastebandy"></div>
+    <h2 class="mahbob ">دسته بندی ها</h2>
+    <div class="slider-wrapper">
+      <div class="card-container">
+        <a href="#hostabri">
+          <div class="card"><img src="pic1.jpg" alt="Card 10">
+            <div class="overlay" id="irangardy"></div>
+            <div class="content">
+              <h3 class="simple-title">فرهنگ و مردم ایران</h3>
+              <p> ریشه‌های تمدنی و همزیستی</p>
+            </div>
+          </div>
+        </a>
+        <a href="#seerverabri">
+          <div class="card"><img src="pic2.jpg" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>تاریخ ایران</h3>
+              <p>تداوم امپراتوری‌ها و تأثیر جهانی</p>
+            </div>
+          </div>
+        </a>
+        <a href="#serverekhtesasi">
+          <div class="card"><img src="ada.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>هنر و ادبیات</h3>
+              <p>زیبایی در هر قالب و فرم</p>
+            </div>
+          </div>
+        </a>
+        <a href="#sayermahsolat">
+          <div class="card"><img src="emrooz.jpg" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>ایران امروز</h3>
+              <p> چالش‌ها، پویایی و چشم‌انداز آینده</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <h2 class="mahbob" id="jazebe">جاذبه های دیدنی که بهتر است قبل از سفر بشناسید!</h2>
+    <div class="slider-wrapper">
+      <button class="slider-btn left" onclick="slide(this, -1)">❯</button>
+      <div class="card-container">
+        <a href="city.html">
+          <div class="card"><img src="takhtjamshid.jpg" alt="Card 1">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>تخت جمشید</h3>
+              <p>استان فارس شهر مرودشت</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#chogazanbil">
+          <div class="card"><img src="chogazanbil.jpg" alt="Card 2">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>چغازنبیل</h3>
+              <p>استان خوزستان شهر شوش</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#asyab">
+          <div class="card"><img src="asyab.jpg" alt="Card 3">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>آسیاب های آبی شوش</h3>
+              <p>استان خوزستان شهر شوشتر</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#nahshjahan">
+          <div class="card"><img src="nahshjahan.jpg" alt="Card 4">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>میدان نقش جهان</h3>
+              <p>استان اصهان شهر اصفهان</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#takhtsolyman">
+          <div class="card"><img src="takhtsolyman.jpg" alt="Card 5">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>تخت سلیمان</h3>
+              <p>استان آذربایجان غربی شهر تکاب</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#bam">
+          <div class="card"><img src="bam.jpg" alt="Card 6">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>ارگ بم</h3>
+              <p>استان کرمان شهر بم</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#pasargad">
+          <div class="card"><img src="pasargad.jpg" alt="Card 7">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>پاسارگاد</h3>
+              <p>استان فارس شهر مرودشت</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#rajab">
+          <div class="card"><img src="rajab.png" alt="Card 8">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>رجب و نقش رستم</h3>
+              <p>استان فارس شهر مرودشت</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#soltaniyeh">
+          <div class="card"><img src="soltaniyeh.png" alt="Card 9">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>گنبد سلطانیه</h3>
+              <p>استان زنجان شهر سلطانیه</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#biston">
+          <div class="card"><img src="biston.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>بیستون</h3>
+              <p>استان کرمانشاه شهر بیستون</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#safi">
+          <div class="card"><img src="safi.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>آرامگاه شیخ صفی</h3>
+              <p>استان اردبیل شهر اردبیل</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#bagshazdeh">
+          <div class="card"><img src="bagshazdeh.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>باغ شازده ماهان</h3>
+              <p>استان کرمان شهر کرمان</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#masjedjame">
+          <div class="card"><img src="masjedjame.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>مسجد جامع اصفهان</h3>
+              <p>استان اصفهان شهر اصفهان</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#kavos">
+          <div class="card"><img src="kavos.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>برج گنبد کاووس</h3>
+              <p>استان گلستان شهر گنبد کاووس</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#googleapis">
+          <div class="card"><img src="golestsn.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>کاخ گلستان</h3>
+              <p>استان تهران شهر تهران</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#firozabad">
+          <div class="card"><img src="firozabad.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>فیروز آباد فارس</h3>
+              <p>استان فارس شهر فیروزآباد</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#jangel">
+          <div class="card"><img src="jangel.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>جنگل های هیرکانی</h3>
+              <p>استان آذربایجان شرقی،اردبیل،گیلان،مازندران،گلستان،سمنان و خراسان شمالی</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#oramant">
+          <div class="card"><img src="oramant.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>اورامانات</h3>
+              <p>استان کردستان شهر مریوان</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#sokhte">
+          <div class="card"><img src="sokhte.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>شهر سوخته</h3>
+              <p>استان سیستان و بلوچستان شهر زابل</p>
+            </div>
+          </div>
+        </a>
+        <a href="city.html#mimand">
+          <div class="card"><img src="mimand.png" alt="Card 10">
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>میمند</h3>
+              <p>استان کرمان شهر شهر بابک</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <button class="slider-btn right" onclick="slide(this, 1)">❮</button>
+    </div>
+    <div class="feature-section">
+      <div class="feature" id="hostabri">
+        <div class="feature-right">
+          <h1 class="feature-right-title reveal reveal-right">فرهنگ و مردم ایران</h1>
+          <p class="feature-right-desc reveal reveal-right">فرهنگ ایران، جریانی زنده است که قدمتی به مرز هفت هزار سال
+            می‌رسد و بر پایه‌هایی
+            استوار است که جهان‌بینی منحصر به فردی را شکل داده‌اند. محور این فرهنگ، زبان فارسی است که با اشعار عرفانی و
+            عاشقانه حافظ، سعدی و مولانا، به اوج رسید و نه تنها زبان ارتباط، بلکه زبان عرفان و فلسفه ملت گردید. این میراث
+            زبانی، در کنار ده‌ها زبان و گویش محلی مانند ترکی، کُردی، گیلکی و بلوچی، سیمای چندصدایی جامعه ایرانی را تشکیل
+            می‌دهد. مردم ایران به مهمان‌نوازی بی‌نظیر، ادب در تعاملات اجتماعی (تعارف)، و تقدس نهاد خانواده شهره‌اند. این
+            سرزمین، خانه اقوام مختلفی است که هر یک با آداب، موسیقی و هنرهای خود، به بافت غنی فرهنگی ایران افزوده و نوروز
+            را به عنوان میراث جهانی صلح و طبیعت‌دوستی جشن می‌گیرند.
+          </p>
+        </div>
+        <div class="feature-left">
+          <img class="anim-base anim-zoom" src="pic1.jpg" alt="فرهنگ و مردم ایران">
+        </div>
+      </div>
+      <div class="feature even" id="seerverabri">
+        <div class="feature-right">
+          <h1 class="feature-right-title reveal reveal-left">تاریخ ایران</h1>
+          <p class="feature-right-desc reveal reveal-left">تاریخ ایران، یکی از طولانی‌ترین و پیوسته‌ترین مسیرهای تمدنی
+            در جهان است. این
+            تاریخ با دوران اساطیری و حماسه‌های ملی آغاز می‌شود و در دوران امپراتوری‌های بزرگ به اوج شکوه خود می‌رسد.
+            هخامنشیان با پایه‌گذاری حکومتی جهانی و منشور حقوق بشر کوروش کبیر، نقش ماندگاری در تاریخ سیاسی جهان ایفا
+            کردند. دوران ساسانیان نیز نقطه عطفی در اوج تمدن پیش از اسلام بود. با ورود اسلام، ایران به موتور محرک عصر
+            طلایی تمدن اسلامی تبدیل شد؛ دانشمندان ایرانی در علوم مختلف، از ریاضیات تا پزشکی، پیشگام شدند و میراث علمی
+            ایران را به سراسر جهان صادر کردند. این تاریخ، همواره صحنه تبادلات فرهنگی و فکری بوده که ایران را به پلی میان
+            شرق و غرب تبدیل کرده است.</p>
+        </div>
+        <div class="feature-left">
+          <img class="anim-base anim-zoom" src="pic2.jpg" alt="تاریخ ایران">
+        </div>
+      </div>
+      <div class="feature" id="serverekhtesasi">
+        <div class="feature-right">
+          <h1 class="feature-right-title reveal reveal-right">هنر و ادبیات ایران</h1>
+          <p class="feature-right-desc reveal reveal-right">هنر و ادبیات ایران، تجلی‌گاه روح زیبایی‌شناس این ملت است که
+            در دقت، ظرافت و عمق
+            معنا بی‌بدیل است. در ادبیات، از حماسه فردوسی تا غزل‌های عاشقانه، جهان‌بینی عمیقی نهفته است. در هنرهای بصری،
+            فرش ایرانی تنها یک زیرانداز نیست، بلکه یک اثر هنری پیچیده با طرح‌ها و نمادهای هزاران ساله است. مینیاتور
+            ایرانی با جزئیات شگفت‌انگیز و خوشنویسی که خود به یک رشته هنری مستقل تبدیل شده، شهرت جهانی دارند. در عرصه
+            معماری، شکوه کاشی‌کاری‌های مساجد، طرح‌های هندسی پیچیده و مقیاس باشکوه بناهایی چون تخت جمشید، نشان می‌دهد که
+            چگونه ایرانیان توانسته‌اند زیبایی‌شناسی، هندسه و معنویت را در سازه‌های خود پیوند زنند.</p>
+        </div>
+        <div class="feature-left">
+          <img class="anim-base anim-zoom" src="ada.png" alt="هنر و ادبیات ایران">
+        </div>
+      </div>
+      <div class="feature even" id="sayermahsolat">
+        <div class="feature-right">
+          <h1 class="feature-right-title reveal reveal-left">ایران امروز</h1>
+          <p class="feature-right-desc reveal reveal-left">ایران امروز، سرزمینی است که در تلاش برای متعادل‌سازی میان
+            میراث عظیم تاریخی خود
+            و الزامات دنیای مدرن قرار دارد. با وجود چالش‌های اقتصادی و سیاسی، این کشور از نیروی محرکه یک جمعیت جوان و
+            تحصیل‌کرده برخوردار است. در دهه‌های اخیر، ایران در حوزه‌هایی مانند فناوری اطلاعات، مهندسی، پزشکی و صنایع
+            پیشرفته دستاوردهای قابل توجهی داشته است. ایرانیان امروز با تکیه بر ظرفیت‌های داخلی و خلاقیت فردی، به دنبال
+            توسعه پایدار و کسب جایگاهی شایسته در معادلات جهانی هستند. این دوران، دوران پویایی و تلاش مستمر برای حفظ
+            ارزش‌های فرهنگی در عین همگامی با تحولات جهان است.</p>
+        </div>
+        <div class="feature-left">
+          <img class="anim-base anim-zoom" src="emrooz.jpg" alt="ایران امروز">
+        </div>
+      </div>
+    </div>
+    <iframe id="map" width="100%" height="500" loading="lazy" allowfullscreen
+      src="https://neshan.org/maps/?#32.4279,53.6880,5">
+    </iframe>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <h2 class="footer-logo">ایران زمین</h2>
+        <ul class="footer-menu">
+          <li><a href="#home">خانه</a></li>
+          <li><a href="#irangardy">ایران گردی</a></li>
+          <li><a href="#dastebandy">دسته بندی ها</a></li>
+          <li><a href="about.html">درباره ما</a></li>
+        </ul>
+
+        <p class="footer-text">
+          تمامی حقوق این سایت محفوظ است © ۱۴۰۵
+        </p>
+
+        <div class="footer-social">
+          <div class="social-item">
+            <span class="tooltip">@instagram</span>
+            <a href="#" class="instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+
+          <div class="social-item">
+            <span class="tooltip">+98 993 000 0000</span>
+            <a href="#" class="whatsapp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="social-item">
+            <span class="tooltip">@telegram</span>
+            <a href="#" class="telegram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
