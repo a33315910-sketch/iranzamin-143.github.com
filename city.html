@@ -16,24 +16,50 @@
 
     <div id="stars-container"></div>
     <header class="header">
-        <div class="logo"><img src="BackgroundEraser_20260122_194349795.png" alt="" width="65px"></div>
-
+        <div class="logo"><img src="images/BackgroundEraser_20260122_194349795.png" alt="لوگو" width="70px"></div>
         <div class="hamburger" id="hamburgerBtn">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
         <nav>
-            <ul class="menu1" id="mainMenu1">
-                <li><a href="index.html#home">خانه</a></li>
-                <div id="myDropdown2" class="dropdown-content2"></div>
-                </div>
+            <ul class="menu" id="mainMenu">
+                <li><a href="index.html">خانه</a></li>
 
+                <div class="dropdown2">
+                    <button onclick="toggleMenu2()" class="dropbtn2">
+                        <span class="desktop-text">ایران گردی &#9662;</span>
+                        <span class="mobile-text"><a href="#jazebe">جاذبه ها</a></span>
+                    </button>
+
+                    <div id="myDropdown2" class="dropdown-content2">
+                        <a href="city.html#takht">تخت جمشید</a>
+                        <a href="city.html#chogazanbil">چغازنبیل</a>
+                        <a href="city.html#asyab">آسیاب های آبی شوش</a>
+                        <a href="city.html#nahshjahan">میدان نقش جهان</a>
+                        <a href="city.html#takhtsolyman">تخت سلیمان</a>
+                        <a href="city.html#bam">ارگ بم</a>
+                        <a href="city.html#pasargad">پاسارگاد</a>
+                        <a href="city.html#rajab">رجب و نقش رستم</a>
+                        <a href="city.html#soltaniyeh">گنبد سلطانیه</a>
+                        <a href="city.html#biston">بیستون</a>
+                        <a href="city.html#safi">آرامگاه شیخ صفی</a>
+                        <a href="city.html#bagshazdeh">باغ شازده ماهان</a>
+                        <a href="city.html#masjedjame">مسجد جامع اصفهان</a>
+                        <a href="city.html#kavos">برج گنبد کاووس</a>
+                        <a href="city.html#googleapis">کاخ گلستان</a>
+                        <a href="city.html#firozabad">فیروز آباد فارس</a>
+                        <a href="city.html#jangel">جنگل های هیرکانی</a>
+                        <a href="city.html#oramant">اورامانت</a>
+                        <a href="city.html#sokhte">شهر شوخته</a>
+                        <a href="city.html#mimand">میمند</a><br>
+                    </div>
+
+                </div>
                 <div class="dropdown">
                     <button onclick="toggleMenu()" class="dropbtn">
-                        <span class="desktop-text">دسته‌ بندی‌ها &#9662;</span>
-                        <span class="mobile-text"><a href="index.html#dastebandy">دسته‌ بندی‌ها</a></span>
+                        <span class="desktop-text"> دسته بندی ها &#9662;</span>
+                        <span class="mobile-text"><a href="#dastebandy">دسته بندی ها</a></span>
                     </button>
 
                     <div id="myDropdown" class="dropdown-content">
@@ -45,19 +71,22 @@
                 </div>
 
                 <li><a href="about.html">درباره ما</a></li>
-                <li><a href="regester.html">ثبت نام/ورود</a></li>
+                <li class="mobile-only"><a href="regesterlogin.html">ورود / ثبت نام</a></li>
+
             </ul>
         </nav>
-
-        <a href="#map" class="map">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
-                <line x1="8" y1="2" x2="8" y2="18"></line>
-                <line x1="16" y1="6" x2="16" y2="22"></line>
-            </svg>
-            نقشه ایران
-        </a>
+        <div class="header-actions">
+            <a href="regesterlogin.html" class="auth-btn">ورود / ثبت نام</a>
+            <a href="index.html#map" class="map">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                    <line x1="8" y1="2" x2="8" y2="18"></line>
+                    <line x1="16" y1="6" x2="16" y2="22"></line>
+                </svg>
+                نقشه ایران
+            </a>
+        </div>
     </header>
 
     <div class="feature-section" id="takht">
@@ -75,11 +104,10 @@
                     شمار می‌آیند. جالب است بدانید که هم‌زمان با ساخت کاخ‌های عظیم در تخت جمشید، در دیگر امپراتوری‌های
                     بزرگ جهان، برده‌داری رواج داشت؛ اما در ایران و در مقر حکومت هخامنشیان، کارگران بیمه بودند و از
                     مزایای مختلفی نیز بهره می‌بردند.<br>
-                    <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
                 </p>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="takhtjamshid.jpg" alt="تخت جمشید">
+                <img class="anim-base anim-zoom" src="images/takhtjamshid.jpg" alt="تخت جمشید">
             </div>
         </div>
 
@@ -96,10 +124,9 @@
                     قدرتمند‌ترین پادشاهان ایلامی برای پرستش و عبادت خدایان ایلامی ساخته و در سال ۶۴۰ پیش از میلاد، به
                     فرمان آشور بانی پال، پادشاه آشوری‌ها، ویران شد. بقایای چغازنبیل امروزه از معروف‌ترین جاذبه های
                     گردشگری ایران است.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="chogazanbil.jpg" alt=" چغازنبیل">
+                <img class="anim-base anim-zoom" src="images/chogazanbil.jpg" alt=" چغازنبیل">
             </div>
         </div>
 
@@ -115,10 +142,9 @@
                     خود را دارند. این سازه در گذشته، آب را برابر به همه‌ شهر می‌رساند و از فوران رود کارون جلوگیری
                     می‌کرد؛ به‌علاوه وظیفه سیراب کردن زمین‌های کشاورزی و به کار انداختن چرخ‌های آسیاب برای تهیه آرد گندم
                     نیز بر عهده داشت.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-right" src="asyab.jpg" alt="آسیاب های آبی شوش">
+                <img class="anim-base anim-right" src="images/asyab.jpg" alt="آسیاب های آبی شوش">
             </div>
         </div>
 
@@ -135,10 +161,9 @@
                     مراکز فروش صنایع دستی و دو دروازه قدیمی چوگان از دیدنی‌های میدان نقش جهان اصفهان هستند. در میان
                     محبوب‌ترین فعالیت‌های گردشگران در این جاذبه نیز می‌توان به بازدید از دیدنی‌های تاریخی، پیاده‌روی و
                     درشکه‌سواری، عکاسی، رفتن به کافه‌ها و غذاخوری‌ها، بازارگردی و خرید سوغات اشاره کرد.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="nahshjahan.jpg" alt="میدان نقش جهان">
+                <img class="anim-base anim-zoom" src="images/nahshjahan.jpg" alt="میدان نقش جهان">
             </div>
 
         </div>
@@ -153,10 +178,9 @@
                     مثل حصار تخت سیلمان، آتشکده آذرگشنسب، ایوان خسرو، معبد آناهیتا، راهروهای تخت سلیمان، سنگ اژدها،
                     بناهای دوره ایلخانی، آتشگاه‌های کوچک و... می‌شود. در محوطه تخت سلیمان یک دریاچه طبیعی بی‌نظیر با
                     هزاران سال قدمت نیز وجود دارد که آب آن از چشمه‌ای در عمق ۱۲۰ متری زمین می‌جوشد.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-right" src="takhtsolyman.jpg" alt="تخت سلیمان">
+                <img class="anim-base anim-right" src="images/takhtsolyman.jpg" alt="تخت سلیمان">
             </div>
 
         </div>
@@ -172,10 +196,9 @@
                     دیدنی بم به شمار می‌آید. ارگ بم، شهری باستانی با مجموعه‌ای از ساختمان‌های بلند با قدمتی از ۲۵۰۰ سال
                     قبل است که به دو بخش رعیت‌نشین و حکومتی تقسیم می‌شود. این ارگ حدود ۱۸ هزار مترمربع وسعت دارد و
                     دیوارهایی با ارتفاع ۶ تا هفت متر آن را احاطه کرده‌اند.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="bam.jpg" alt="ارگ بم">
+                <img class="anim-base anim-zoom" src="images/bam.jpg" alt="ارگ بم">
             </div>
         </div>
 
@@ -190,10 +213,9 @@
                     مقبره کوروش، مسجد پاسارگاد شیراز، پل پاسارگاد، تنگ بلاغی، کاخ‌های بزرگ (بارعام، کاخ دروازه، کاخ
                     اختصاصی)، باغ‌های شاهی، تل تخت یا مادرسلیمان، آرامگاه کمبوجیه و کاروانسرای مظفری می‌شود و از
                     محبوب‌ترین جاهای دیدنی ایران به شمار می‌رود.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-right" src="pasargad.jpg" alt="پاسارگاد">
+                <img class="anim-base anim-right" src="images/pasargad.jpg" alt="پاسارگاد">
             </div>
         </div>
 
@@ -213,10 +235,9 @@
                     آثار فرهنگی دوره حکومت ساسانیان است که شامل چهار سنگ‌نگاره شاپور (دومین پادشاه ساسانی) و درباریان،
                     تاج‌گذاری اردشیر بابکان (بنیان‌گذار شاهنشاهی ساسانی)، کتیبه کرتیر و تاج‌گذاری شاپور اول (فرزند
                     اردشیر بابکان) می‌شود؛ حجاری‌هایی که آثاری بی‌نظیر هستند و بیننده را شگفت‌زده می‌کنند. </p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="rajab.png" alt="نقش رجب و نقش رستم">
+                <img class="anim-base anim-zoom" src="images/rajab.png" alt="نقش رجب و نقش رستم">
             </div>
         </div>
 
@@ -232,10 +253,9 @@
                     شمار می‌آید. بدنه اصلی آرامگاه سلطانیه با آجر ساخته و گنبد عظیم و دوجداره آن با روكش كاشی‌های
                     فیروزه‌ای و لاجوردی و به شیوه معرق‌كاری تزیین شده است. تزیینات داخلی بنای گنبد سلطانیه نیز شامل گچ
                     بری، مقرنس كاری، كاشیكاری، خطوط تزئینی و تزیینات آجری متنوع می‌شود.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-right" src="soltaniyeh.png" alt="گنبد سلطانیه">
+                <img class="anim-base anim-right" src="images/soltaniyeh.png" alt="گنبد سلطانیه">
             </div>
         </div>
 
@@ -252,10 +272,9 @@
                     گنجینه‌ای که تاکنون ۲۸ اثر آن به ثبت آثار ملی ایران رسیده‌ است. در مجموعه تاریخی بیستون امکاناتی چون
                     پارکینگ، سرویس بهداشتی، نمازخانه، غرفه صنایع‌دستی و خرید سوغات، رستوران و شربت‌خانه برای رفاه حال
                     گردشگران وجود دارد.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="biston.png" alt="بیستون">
+                <img class="anim-base anim-zoom" src="images/biston.png" alt="بیستون">
             </div>
         </div>
 
@@ -270,10 +289,9 @@
                     ایلخانی تا صفوی را به نمایش می‌گذارند. سردر و حیاط ورودی، صحن اصلی یا حیاط قندیل خانه، جنت سرا، گنبد
                     اللّه‌اللّه، مقبره شاه اسماعیل اول، عمارت چینی خانه، حرم خانه، چله خانه، تالار دارالحفاظ، دارالحدیث
                     و حیاط و گورستان شهیدگاه از مهم‌ترین بخش‌های این مجموعه هستند.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-right" src="safi.png" alt="آرامگاه شیخ صفی">
+                <img class="anim-base anim-right" src="images/safi.png" alt="آرامگاه شیخ صفی">
             </div>
         </div>
 
@@ -289,10 +307,9 @@
                     یکی از بهترین باغ‌های شیب‌دار با نمایش بی‌نظیر و تماشایی آب به‌صورت پلکانی و در سطح‌های افقی و عمودی
                     است که با پلانی مستطیل شکل، حدود ۵٫۵ هکتار وسعت دارد و شامل سردر ورودی، حمام، عمارت، شبکه آب‌رسانی و
                     حوض در میان حصاری بلند از درختان می‌شود.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="bagshazdeh.png" alt="باغ شازده ماهان">
+                <img class="anim-base anim-zoom" src="images/bagshazdeh.png" alt="باغ شازده ماهان">
             </div>
         </div>
 
@@ -309,10 +326,9 @@
                     جنوبی و شمالی، ایوان درویش، ایوان صاحب، ایوان استاد، ایوان شاگرد، ایوان عمر، مسجد الجایتو، شبستان
                     زمستانی بیت الشتاء، کتابخانه خواجه نظام‌الملک و سنگاب‌های مسجد جامع اصفهان از دیدنیهای این بنای
                     تاریخی به شمار می‌آیند.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-right" src="masjedjame.png" alt="مسجد جامع اصفهان">
+                <img class="anim-base anim-right" src="images/masjedjame.png" alt="مسجد جامع اصفهان">
             </div>
         </div>
 
@@ -329,10 +345,9 @@
                     استوارکننده‌ای ندارد و در طول عمر بیش از هزار ساله‌اش حتی با تحمل دو زمین‌لرزه‌ شدیدتر از ۶ ریشتر،
                     همچنان استوار باقی مانده است. ارتفاع میل گنبد با احتساب پایه حدود ۷۰ متر ارتفاع دارد که ۱۸ متر از
                     این ارتفاع متعلق به سرپوش میل است که به‌شکل گنبدی مخروطی ساخته شده است.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="kavos.png" alt="برج گنبد کاووس">
+                <img class="anim-base anim-zoom" src="images/kavos.png" alt="برج گنبد کاووس">
             </div>
         </div>
 
@@ -352,10 +367,9 @@
                     حاضر مساحت این کاخ به ۴٫۵ هکتار می‌رسد؛ وسعتی معادل یک‌دهم وسعت اولیه‌ آن. این کاخ در گذشته محل
                     سکونت پادشاهانی همچون آقا محمدخان، فتحعلی شاه، ناصرالدین شاه، مظفرالدین شاه و احمدشاه قاجار بوده
                     است.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-right" src="golestsn.png" alt="کاخ گلستان">
+                <img class="anim-base anim-right" src="images/golestsn.png" alt="کاخ گلستان">
             </div>
         </div>
 
@@ -371,10 +385,9 @@
                     چشم‌انداز باستان‌شناسی ساسانی منطقه فارس (ثبت شده در میراث یونسکو)، کاخ اردشیر بابکان یا آتشکده
                     فیروزآباد، قلعه دختر، دریاچه و سد تنگاب، تنگه هایقر و روستای گردشگری رودبال از مهم‌ترین دیدنی‌های
                     شهر فیروزآباد هستند.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="firozabad.png" alt="فیروزآباد فارس">
+                <img class="anim-base anim-zoom" src="images/firozabad.png" alt="فیروزآباد فارس">
             </div>
         </div>
 
@@ -393,10 +406,9 @@
                     هستند و وسعت بالای آن‌ها نقش قابل‌توجهی در تولید اکسیژن و هوای پاک نواحی اطراف آن دارد. جنگل
                     الیمستان آمل، جنگل ابر شاهرود، جنگل بولا ساری، جنگل واز نور، جنگل کجور نوشهر، جنگل لیسار تالش، جنگل
                     چهارباغ چالوس و جنگل خشکه داران تنکابن معروف ترین جنگل های هیرکانی ایران هستند.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-right" src="jangel.png" alt="جنگل های هیرکانی">
+                <img class="anim-base anim-right" src="images/jangel.png" alt="جنگل های هیرکانی">
             </div>
         </div>
 
@@ -411,10 +423,9 @@
                     برجای‌مانده انسان‌ها از حدود ۴۰ هزار سال پیش و در زمان پارینه‌سنگی در این منطقه زندگی می‌کردند.
                     آب‌وهوای منطقه اورامان کوهستانی است؛ منطقه ای پوشیده از جنگل‌های بزرگ و سرسبز که هزاران گردشگر داخلی
                     وخارجی را به‌سمت خود می‌کشاند.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="oramant.png" alt="اورامانات ">
+                <img class="anim-base anim-zoom" src="images/oramant.png" alt="اورامانات ">
             </div>
         </div>
 
@@ -430,10 +441,9 @@
                     دستی (اولین انیمیشن جهان روی یک جام) و «شهر علم»، به سبب کشف یافته‌های برجسته علمی به‌خصوص در زمینه
                     علم پزشکی (مانند چشم مصنوعی، خط‌کشی ساخته شده از چوب آبنوس، تخته نردی قدیمی با ۶۰ مهره) نیز یاد
                     می‌شود. شهر سوخته از بهترین جاهای دیدنی ایران است و نباید فرصت بازدید از آن را از دست داد.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-right" src="sokhte.png" alt="شهر سوخته">
+                <img class="anim-base anim-right" src="images/sokhte.png" alt="شهر سوخته">
             </div>
         </div>
 
@@ -448,33 +458,34 @@
                     ۲,۵۶۰ می‌رسد. معماری کیچه‌ها به‌گونه‌ای است که مانند یک عایق حرارتی عمل می‌کنند، باد و باران به داخل
                     آن نفوذ نمی‌كند و در مقابل آتش‌سوزی نیز مقاوم هستند. مسجد، حسینیه، مدرسه، حمام و آتشکده میمند از
                     دیدنی‌های این روستا به شمار می‌آیند.</p><br>
-                     <a class="tor" href="https://www.alaedin.travel/attractions/iran/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#">رزرو بلیط</a>
             </div>
             <div class="feature-left">
-                <img class="anim-base anim-zoom" src="mimand.png" alt="میمند">
+                <img class="anim-base anim-zoom" src="images/mimand.png" alt="میمند">
             </div>
         </div>
     </div>
 
-    <hr width="50%" style="margin: auto;">
+    <hr width="50%" style="margin: 90px auto; ">
     <footer class="footer">
         <div class="footer-container">
-            <h2 class="footer-logo">ایران زمین</h2>
+            <h2 class="footer-logo"><img src="images/BackgroundEraser_20260122_194349795.png" alt="" width="100px"
+                    height="100px"></h2>
             <ul class="footer-menu">
                 <li><a href="index.html">خانه</a></li>
                 <li><a href="index.html#irangardy">ایران گردی</a></li>
                 <li><a href="index.html#dastebandy">دسته بندی ها</a></li>
                 <li><a href="about.html">درباره ما</a></li>
+                <li><a href="#" id="surveyBtn">ارسال نظر شما</a></li>
             </ul>
 
             <p class="footer-text">
                 تمامی حقوق این سایت محفوظ است © ۱۴۰۵
             </p>
-
             <div class="footer-social">
                 <div class="social-item">
-                    <span class="tooltip">@instagram</span>
-                    <a href="#" class="instagram">
+                    <span class="tooltip">anna-pm7@</span>
+                    <a href="https://instagram.com/iran_tourism_official" target="_blank" class="instagram"
+                        class="instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -485,8 +496,8 @@
                 </div>
 
                 <div class="social-item">
-                    <span class="tooltip">+98 993 000 0000</span>
-                    <a href="#" class="whatsapp">
+                    <span class="tooltip">2717 648 993 </span>
+                    <a href="https://wa.me/989301234567" target="_blank" class="whatsapp" class="whatsapp">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path
@@ -497,8 +508,8 @@
                 </div>
 
                 <div class="social-item">
-                    <span class="tooltip">@telegram</span>
-                    <a href="#" class="telegram">
+                    <span class="tooltip">anahita-pm@</span>
+                    <a href="https://t.me/iran_tourism_channel" target="_blank" class="telegram" class="telegram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -508,6 +519,18 @@
                 </div>
             </div>
     </footer>
+    <div id="surveyModal" class="modal1">
+        <div class="modal1-content">
+            <span class="close-btn">&times;</span>
+            <h3 style=" color: rgb(198, 218, 255);">نظرتون برامون خیلی ارزشمنده </h3>
+            <p class="subtitle">لطفاً تجربه یا پیشنهادتون رو با ما در میان بگذارید:</p>
+            <form id="surveyForm">
+                <textarea id="userOpinion" name="userOpinion" rows="4" placeholder="اینجا بنویسید..."></textarea>
+                <button class="but" type="submit">ارسال دیدگاه </button>
+            </form>
+        </div>
+    </div>
+    <div id="thankYouToast" class="toast"> سپاس از شما، نظر زیبای شما ثبت شد!</div>
 
     <script src="script.js"></script>
 </body>

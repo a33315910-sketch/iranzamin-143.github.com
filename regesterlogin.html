@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام و بازی ایران‌گردی</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="regesterlogin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div id="stars-container"></div>
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <div class="milan-tower-container">
+    <img src="images/download.png" alt="برج میلاد تهران" class="milan-tower-image" id="milan-tower">
+    <div class="milan-tower-glow"></div>
+    <div class="milan-tower-sparkle" style="--i:1"></div>
+    <div class="milan-tower-sparkle" style="--i:2"></div>
+    <div class="milan-tower-sparkle" style="--i:3"></div>
+</div>
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <div class="home-link-top">
+        <a href="index.html" class="home-btn">
+            <i class="fas fa-home"></i>
+            بازگشت به خانه
+        </a>
+    </div>
+  <div id="stars-container"></div>
+    <div class="container">
+        <div class="form-container" id="signup-container">
+            <h2 style="font-size: 29px;  font-family: 'zar', Tahoma, Arial, sans-serif;">ثبت نام در ایران‌گردی</h2>
+            <p style="font-size: 19px;">برای شرکت در بازی اطلاعات عمومی ایران ثبت‌نام کنید</p>
+
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">نام کامل</label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="signup-name" placeholder="نام خود را وارد کنید" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-email">ایمیل</label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="signup-email" placeholder="ایمیل خود را وارد کنید" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-password">رمز عبور</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="signup-password" placeholder="رمز عبور خود را وارد کنید" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">ثبت‌نام و شروع بازی</button>
+                </div>
+            </form>
+
+            <div class="toggle-link">
+                قبلاً حساب دارید؟ <a id="show-login">وارد شوید</a>
+            </div>
+
+            <div class="home-link-in-form">
+                <a href="index.html">
+                    <i class="fas fa-arrow-right"></i> بازگشت به صفحه اصلی
+                </a>
+            </div>
+        </div>
+<div id="stars-container"></div>
+        <div class="side-panel" id="side-panel">
+            <div class="lock-icon" id="lock-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h3 style="font-size: 29px;">بازی اطلاعات عمومی ایران</h3>
+            <p style="font-size: 19px;">بعد از ثبت‌نام، در یک بازی جذاب ۵ سوالی درباره جاذبه‌های گردشگری ایران شرکت کنید و امتیاز بگیرید!</p>
+
+            <div id="user-stats" style="display: none;">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h4 id="user-name">کاربر مهمان</h4>
+
+                    <div class="stat-item">
+                        <span style="font-size: 19px;">تعداد بازی‌ها:</span>
+                        <strong id="games-played">0</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div id="guest-info">
+                <div style="text-align: center; margin-top: 20px;">
+                    <div
+                        style="display: inline-block; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; margin-bottom: 25px;">
+                        <div style="font-size: 28px; font-weight: bold; color: rgba(198, 218, 255, 0.95);">۵ سوال</div>
+                        <div style="font-size: 19px; color: rgba(255, 255, 255, 0.8);">درباره ایران</div>
+                    </div>
+
+                    <div
+                        style="display: flex; flex-direction: column; gap: 15px; margin-top: 25px; text-align: right; width: 100%;">
+                        <div
+                            style="display: flex; align-items: center; font-size: 19px; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-check-circle"
+                                style="font-size: 20px; margin-left: 12px; color: rgba(198, 218, 255, 0.95);"></i>
+                            <span>هر پاسخ صحیح: ۲۰ امتیاز</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; font-size: 19px; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-clock"
+                                style="font-size: 20px; margin-left: 12px; color: rgba(198, 218, 255, 0.95);"></i>
+                            <span>محدودیت زمانی: ۳۰ ثانیه</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; font-size: 19px; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-medal"
+                                style="font-size: 20px; margin-left: 12px; color: rgba(198, 218, 255, 0.95);"></i>
+                            <span>دریافت نشان بر اساس امتیاز</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container hidden" id="login-container">
+            <h2>ورود به حساب کاربری</h2>
+            <p>خوش آمدید! لطفاً وارد حساب کاربری خود شوید</p>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">ایمیل</label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="login-email" placeholder="ایمیل خود را وارد کنید" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">رمز عبور</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="login-password" placeholder="رمز عبور خود را وارد کنید" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">ورود و بازی کردن</button>
+                </div>
+            </form>
+
+            <div class="toggle-link">
+                حساب کاربری ندارید؟ <a id="show-signup">ثبت‌نام کنید</a>
+            </div>
+            <div class="home-link-in-form">
+                <a href="index.html">
+                    <i class="fas fa-arrow-right"></i> بازگشت به صفحه اصلی
+                </a>
+            </div>
+        </div>
+        <div id="stars-container"></div>
+        <div class="welcome-back hidden" id="welcome-back">
+            <h3 id="welcome-name" style="font-size: 32px;">خوش آمدید!</h3>
+            <p id="welcome-stats">آماده بازی کردن هستید؟</p>
+
+            <div class="button-group">
+                <button class="btn btn-game" id="start-game-btn">
+                    <i class="fas fa-gamepad"></i> شروع بازی جدید
+                </button>
+
+                <button class="btn btn-profile" id="profile-btn">
+                    <i class="fas fa-user-circle"></i> مشاهده پروفایل
+                </button>
+
+                <button class="btn btn-logout" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> خروج از حساب
+                </button>
+            </div>
+        </div>
+        <div id="stars-container"></div>
+        <div class="game-container hidden" id="game-container">
+            <div class="game-header">
+                <div class="game-title">
+                    <i class="fas fa-gamepad"></i> بازی اطلاعات عمومی ایران
+                </div>
+                <div class="game-stats">
+                    <div class="stat">
+                        <div class="stat-value" id="score">0</div>
+                        <div class="stat-label">امتیاز</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="question-counter">1/5</div>
+                        <div class="stat-label">سوال</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="timer">30</div>
+                        <div class="stat-label">ثانیه</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-number">سوال <span id="current-question">1</span> از 5</div>
+                <div class="question-text" id="question-text">
+                    در حال بارگذاری سوال...
+                </div>
+            </div>
+
+            <div class="options-container" id="options-container">
+            </div>
+
+            <div class="game-feedback hidden" id="game-feedback">
+            </div>
+
+            <div class="game-actions">
+                <button class="btn btn-small btn-cancel" id="cancel-game-btn">
+                    <i class="fas fa-times"></i> انصراف از بازی
+                </button>
+                <button class="btn btn-small hidden" id="next-question-btn">
+                    <i class="fas fa-arrow-left"></i> سوال بعدی
+                </button>
+                <button class="btn btn-small hidden" id="finish-game-btn">
+                    پایان بازی
+                </button>
+            </div>
+        </div>
+
+        <div class="result-container hidden" id="result-container">
+            <div class="result-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div class="badge" id="result-badge">نتیجه شما</div>
+            <div class="result-title" id="result-title"></div>
+            <div class="result-score" id="result-score">0</div>
+            <div class="result-message" id="result-message"></div>
+            <div class="button-group">
+                <button class="btn btn-game" id="play-again-btn">
+                    <i class="fas fa-redo"></i> بازی مجدد
+                </button>
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> بازگشت به خانه
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="regester.js"></script>
+</body>
+
+</html>

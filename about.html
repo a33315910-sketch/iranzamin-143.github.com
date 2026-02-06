@@ -9,6 +9,7 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
   <title>درباره ما</title>
 </head>
 
@@ -16,20 +17,20 @@
 
   <div id="stars-container"></div>
   <header class="header">
-    <div class="logo"><img src="BackgroundEraser_20260122_194349795.png" alt="" width="65px"></div>
+    <div class="logo"><img src="images/BackgroundEraser_20260122_194349795.png" alt="لوگو" width="70px"></div>
     <div class="hamburger" id="hamburgerBtn">
       <span></span>
       <span></span>
       <span></span>
     </div>
     <nav>
-      <ul class="menu2" id="mainMenu2">
-        <li><a href="index.html#home">خانه</a></li>
+      <ul class="menu1" id="mainMenu">
+        <li><a href="index.html">خانه</a></li>
 
         <div class="dropdown2">
           <button onclick="toggleMenu2()" class="dropbtn2">
             <span class="desktop-text">ایران گردی &#9662;</span>
-            <span class="mobile-text"><a href="index.html#jazebe">جاذبه ها</a></span>
+            <span class="mobile-text"><a href="#jazebe">جاذبه ها</a></span>
           </button>
 
           <div id="myDropdown2" class="dropdown-content2">
@@ -59,22 +60,24 @@
         <div class="dropdown">
           <button onclick="toggleMenu()" class="dropbtn">
             <span class="desktop-text"> دسته بندی ها &#9662;</span>
-            <span class="mobile-text"><a href="index.html#dastebandy">دسته بندی ها</a></span>
+            <span class="mobile-text"><a href="#dastebandy">دسته بندی ها</a></span>
           </button>
 
           <div id="myDropdown" class="dropdown-content">
-            <a href="#hostabri">فرهنگ و مردم </a>
-            <a href="#seerverabri">تاریخ ایران</a>
-            <a href="#serverekhtesasi">هنر و ادبیات</a>
-            <a href="#sayermahsolat">ایران امروز</a>
+            <a href="index.html#hostabri">فرهنگ و مردم </a>
+            <a href="index.html#seerverabri">تاریخ ایران</a>
+            <a href="index.html#serverekhtesasi">هنر و ادبیات</a>
+            <a href="index.html#sayermahsolat">ایران امروز</a>
           </div>
         </div>
 
-        
-        <li><a href="regester.html">ثبت نام/ورود</a></li>
+ 
+        <li class="mobile-only mobile-replace"><a href="regesterlogin.html">ورود / ثبت نام</a></li>
       </ul>
     </nav>
-   <a href="#map" class="map">
+    <div class="header-actions">
+      <a href="regesterlogin.html" class="auth-btn">ورود / ثبت نام</a>
+      <a href="index.html#map" class="map">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
@@ -83,33 +86,60 @@
         </svg>
         نقشه ایران
       </a>
+    </div>
   </header>
+
   <section class="mission">
-    <h2 class="about-h2">هدف این وب‌سایت</h2>
-    <p class="about-p reveal reveal-right"> به نام زیبایی، فرهنگ و طبیعت ایران <br>
+    <div class="mission-content">
+      <div class="mission-slideshow">
+        <div class="slideshow-container">
 
-      من دانش‌آموزی هستم که با عشق به سرزمینم، این سایت را برای معرفی گوشه‌های دل‌انگیز ایران ساخته‌ام.<br>
+          <div class="about-slide fade">
+            <img src="images/photo23888994988.jpg" alt="">
+          </div>
 
-      هدف من این است که شما را با شهرهای محبوب کشورمان، از شمال سرسبز تا کویر طلایی، آشنا کنم.<br>
+          <div class="about-slide fade">
+            <img src="images/photo23890247722.jpg" alt="">
+          </div>
 
-      در این وب‌سایت می‌توانید درباره حدود ۲۰ جاذبه دیدنی ایران بخوانید،<br>
+          <div class="about-slide fade">
+            <img src="images/photo23888995673.jpg" alt="">
+          </div>
 
-      از آب و هوای هر منطقه و بهترین زمان سفر اطلاع پیدا کنید،
+          <div class="about-slide fade">
+            <img src="images/photo23890083553.jpg" alt="">
+          </div>
 
-      و جاذبه‌هایی را بشناسید که شاید کمتر دیده شده باشند.<br>
+          <div class="slideshow-dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+        </div>
 
-      علاوه بر معرفی شهرها، بخشی از سایت به فرهنگ، هنر، تاریخ و ادبیات کهن ایران اختصاص داده شده است ،<br>
-
-      تا یادمان نرود مردمان این سرزمین چقدر مهربان، هنرمند و پر از اصالت‌اند.<br>
-
-      هدفم این است که نشان دهم ایران فقط یک کشور نیست، بلکه یک داستان زیبا از طبیعت و مردم است.<br>
-
-      امیدوارم این سایت بتواند الهام‌بخش شما برای کشف دوباره زیبایی‌های وطن باشد.<br>
-    </p>
+        <p class="slideshow-caption">هنرجویان یازدهم شبکه و نرم افزار هنرستان مطهری</p>
+      </div>
+      <div class="mission-text">
+        <h2 class="about-h2 reveal reveal-right">هدف این وب‌سایت</h2>
+        <p class="about-p reveal reveal-right">
+          به نام زیبایی، فرهنگ و طبیعت ایران <br>
+          من دانش‌آموزی هستم که با عشق به سرزمینم، این سایت را برای معرفی گوشه‌های دل‌انگیز ایران ساخته‌ام.<br>
+          هدف من این است که شما را با شهرهای محبوب کشورمان، از شمال سرسبز تا کویر طلایی، آشنا کنم.<br>
+          در این وب‌سایت می‌توانید درباره حدود ۲۰ جاذبه دیدنی ایران بخوانید،<br>
+          از آب و هوای هر منطقه و بهترین زمان سفر اطلاع پیدا کنید،<br>
+          و جاذبه‌هایی را بشناسید که شاید کمتر دیده شده باشند.<br>
+          علاوه بر معرفی شهرها، بخشی از سایت به فرهنگ، هنر، تاریخ و ادبیات کهن ایران اختصاص داده شده است،<br>
+          تا یادمان نرود مردمان این سرزمین چقدر مهربان، هنرمند و پر از اصالت‌اند.<br>
+          هدفم این است که نشان دهم ایران فقط یک کشور نیست، بلکه یک داستان زیبا از طبیعت و مردم است.<br>
+          امیدوارم این سایت بتواند الهام‌بخش شما برای کشف دوباره زیبایی‌های وطن باشد.<br>
+        </p>
+      </div>
+    </div>
   </section>
 
   <section class="content-summary">
-    <h2 class="content-h2">محتوای سایت</h2>
+    <h2 class="content-h2 reveal reveal-right">محتوای سایت</h2>
     <p class="content-p1 reveal reveal-right">
       شما در این وب‌سایت می‌توانید اطلاعات جامعی در مورد حدود <strong>۲۰ جاذبه زیبای شهر های ایران</strong> را بیابید.
       این اطلاعات شامل موارد زیر است:
@@ -126,65 +156,80 @@
   </section>
 
   <section class="creator">
-    <h2 class="creator-h2">سازنده</h2>
+    <h2 class="creator-h2 reveal reveal-right">سازنده</h2>
     <p class="creator-p reveal reveal-right">
       این پروژه توسط آناهیتا پیامنی هنرجوی هنرستان شهید مطهری کاشان، در قالب
-      پروژه‌ای برای جشنواره‌ طراحی شده است. <br>جهت ارتباط و یا انتقاد: <span>anahita-payamani@</span>
+      پروژه‌ای برای جشنواره‌ طراحی شده است.
     </p>
   </section>
 
   <footer class="footer-about">
-   <hr width="50%" style="margin: auto;">
+    <hr width="50%" style="margin: auto;">
     <div class="footer-container-about">
-      <h2 class="footer-logo-about">ایران زمین</h2>
+      <h2 class="footer-logo"><img src="images/BackgroundEraser_20260122_194349795.png" alt="" width="100px"
+          height="100px"></h2>
       <ul class="footer-menu-about">
         <li><a href="index.html#home">خانه</a></li>
         <li><a href="index.html#irangardy">ایران گردی</a></li>
         <li><a href="index.html#dastebandy">دسته بندی ها</a></li>
+        <li><a href="#" id="surveyBtn">ارسال نظر شما</a></li>
       </ul>
 
       <p class="footer-text-about">
         تمامی حقوق این سایت محفوظ است © ۱۴۰۵
       </p>
-
-     <div class="footer-social">
-          <div class="social-item">
-            <span class="tooltip">@instagram</span>
-            <a href="#" class="instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-          </div>
-
-          <div class="social-item">
-            <span class="tooltip">+98 993 000 0000</span>
-            <a href="#" class="whatsapp">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                </path>
-              </svg>
-            </a>
-          </div>
-
-          <div class="social-item">
-            <span class="tooltip">@telegram</span>
-            <a href="#" class="telegram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
-            </a>
-          </div>
+      <div class="footer-social">
+        <div class="social-item">
+          <span class="tooltip">anna-pm7@</span>
+          <a href="https://instagram.com/iran_tourism_official" target="_blank" class="instagram" class="instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
         </div>
+
+        <div class="social-item">
+          <span class="tooltip">2717 648 993 </span>
+          <a href="https://wa.me/989301234567" target="_blank" class="whatsapp" class="whatsapp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+              </path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <span class="tooltip">anahita-pm@</span>
+          <a href="https://t.me/iran_tourism_channel" target="_blank" class="telegram" class="telegram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </a>
+        </div>
+      </div>
   </footer>
+
+  <div id="surveyModal" class="modal1">
+    <div class="modal1-content">
+      <span class="close-btn">&times;</span>
+       <h3 style=" color: rgb(198, 218, 255);">نظرتون برامون خیلی ارزشمنده </h3>
+      <p class="subtitle">لطفاً تجربه یا پیشنهادتون رو با ما در میان بگذارید:</p>
+      <form id="surveyForm">
+        <textarea id="userOpinion" name="userOpinion" rows="4" placeholder="اینجا بنویسید..."></textarea>
+        <button class="but" type="submit">ارسال دیدگاه </button>
+      </form>
+    </div>
+  </div>
+  <div id="thankYouToast" class="toast"> سپاس از شما، نظر زیبای شما ثبت شد!</div>
   <script src="script.js"></script>
+
 </body>
 
 </html>
