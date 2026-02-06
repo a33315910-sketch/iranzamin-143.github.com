@@ -424,7 +424,7 @@ body.menu-open {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
     .mission {
         padding: 2rem 1rem;
         margin: 1.5rem auto;
