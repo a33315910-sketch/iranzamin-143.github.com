@@ -422,6 +422,7 @@ body.menu-open {
     .slideshow-container {
         max-width: 400px;
     }
+    
 }
 
 @media (max-width: 480px) {
@@ -436,7 +437,7 @@ body.menu-open {
     }
 
     .about-h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .about-p {
@@ -465,11 +466,15 @@ body.menu-open {
 
     .content-ul li {
         font-size: 1rem;
+        margin-right: 30px;
     }
     
     .content-summary, .creator{
-        width: 400px;
+        width: 350px;
         margin-right: 40px;
+    }
+    .mission-tex{
+        width: 300px;
     }
 }
 
