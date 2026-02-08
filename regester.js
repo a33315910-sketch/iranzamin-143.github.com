@@ -589,7 +589,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
     function startTimer() {
         clearInterval(currentGame.timer);
         currentGame.timeLeft = 30;
@@ -602,7 +601,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (currentGame.timeLeft <= 0) {
                 clearInterval(currentGame.timer);
                 if (!currentGame.answered) {
-                    // زمان تمام شد
+
                     currentGame.currentQuestion++;
 
                     if (currentGame.currentQuestion < currentGame.questions.length) {
@@ -799,19 +798,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }, index * 150);
     });
 }); 
-// افزودن انیمیشن‌های تعاملی برای تصویر برج میلاد
+
 function initMilanTower() {
     const milanTower = document.getElementById('milan-tower');
     const container = document.querySelector('.milan-tower-container');
     
     if (!milanTower) return;
     
-    // انیمیشن هنگام هاور روی تصویر
     container.addEventListener('mouseenter', function() {
         milanTower.style.animation = 'towerGlow 1s ease-in-out infinite alternate';
         container.style.animation = 'floatTower 3s ease-in-out infinite';
         
-        // اضافه کردن جرقه‌های بیشتر
         for (let i = 0; i < 5; i++) {
             createSparkle();
         }
@@ -822,7 +819,6 @@ function initMilanTower() {
         container.style.animation = 'floatTower 6s ease-in-out infinite';
     });
     
-    // ایجاد جرقه‌های تصادفی
     function createSparkle() {
         const sparkle = document.createElement('div');
         sparkle.className = 'milan-tower-sparkle';
@@ -840,7 +836,6 @@ function initMilanTower() {
         
         container.appendChild(sparkle);
         
-        // حذف جرقه بعد از انیمیشن
         setTimeout(() => {
             if (sparkle.parentNode) {
                 sparkle.remove();
@@ -848,14 +843,12 @@ function initMilanTower() {
         }, 3000);
     }
     
-    // ایجاد جرقه‌های دوره‌ای
     setInterval(() => {
         if (Math.random() > 0.7) {
             createSparkle();
         }
     }, 2000);
     
-    // پالس‌های نورانی دوره‌ای
     setInterval(() => {
         const glow = document.querySelector('.milan-tower-glow');
         if (glow) {
@@ -867,7 +860,6 @@ function initMilanTower() {
     }, 8000);
 }
 
-// فراخوانی تابع بعد از لود صفحه
 document.addEventListener('DOMContentLoaded', function() {
     initMilanTower();
 });

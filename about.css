@@ -7,7 +7,18 @@ body {
     font-family: 'zar', Tahoma, Arial, sans-serif;
 }
 
-body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+li,
+div {
     word-spacing: -2px !important;
     letter-spacing: 0.3px !important;
 }
@@ -47,9 +58,6 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
     transition: transform 0.3s ease;
 }
 
-/* ======= استایل‌های جدید برای صفحه درباره ما ======= */
-
-/* استایل‌های منوی صفحه درباره ما */
 .menu1 {
     position: relative;
 }
@@ -58,7 +66,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
     .menu1 {
         display: none;
         position: fixed;
-        top: 73px; /* ارتفاع هدر */
+        top: 73px;
         left: 0;
         right: 0;
         background: rgba(0, 1, 6, 0.95);
@@ -70,13 +78,13 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
         -webkit-overflow-scrolling: touch;
         margin: 0;
     }
-    
+
     .menu1.active {
         display: flex;
         flex-direction: column;
         animation: slideDown 0.3s ease;
     }
-    
+
     .menu1 li {
         width: 100%;
         text-align: right;
@@ -84,7 +92,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
         margin: 0;
         padding: 0;
     }
-    
+
     .menu1 li a {
         display: block;
         padding: 15px;
@@ -97,27 +105,26 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
         border-radius: 0;
         margin: 0;
     }
-    
+
     .menu1 li a:hover {
         background: rgba(255, 255, 255, 0.05);
         color: #fff;
         padding-right: 20px;
     }
-    
-    /* استایل برای آیتم‌های mobile-only در صفحه درباره ما */
+
     .menu1 li.mobile-only,
     .menu1 li.mobile-replace {
         display: block !important;
         width: 100%;
     }
     
-    /* استایل‌های dropdown در صفحه درباره ما */
+
     .menu1 .dropdown,
     .menu1 .dropdown2 {
         width: 100%;
         display: block;
     }
-    
+
     .menu1 .dropbtn,
     .menu1 .dropbtn2 {
         width: 100%;
@@ -135,13 +142,13 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
         align-items: center;
         margin: 0;
     }
-    
+
     .menu1 .dropbtn:hover,
     .menu1 .dropbtn2:hover {
         background: rgba(255, 255, 255, 0.05);
         padding-right: 20px;
     }
-    
+
     .menu1 .dropdown-content,
     .menu1 .dropdown-content2 {
         position: static;
@@ -154,17 +161,17 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
         display: none;
         animation: none;
     }
-    
+
     .menu1 .dropdown-content.show,
     .menu1 .dropdown-content2.show {
         display: block;
     }
-    
+
     .menu1 .dropdown-content2 {
         column-count: 1;
         width: 100%;
     }
-    
+
     .menu1 .dropdown-content a,
     .menu1 .dropdown-content2 a {
         padding: 10px 15px;
@@ -177,7 +184,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
         border-radius: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
-    
+
     .menu1 .dropdown-content a:hover,
     .menu1 .dropdown-content2 a:hover {
         background: rgba(255, 255, 255, 0.1);
@@ -186,19 +193,18 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
     }
 }
 
-/* انیمیشن برای منوی کشویی */
 @keyframes slideDown {
     from {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* جلوگیری از اسکرول بدن هنگام باز بودن منو */
 body.menu-open {
     overflow: hidden !important;
     position: fixed;
@@ -206,7 +212,6 @@ body.menu-open {
     height: 100%;
 }
 
-/* استایل هامبورگر برای صفحه درباره ما */
 .header .hamburger {
     display: none;
 }
@@ -216,26 +221,24 @@ body.menu-open {
         display: flex;
         margin-left: auto;
     }
-    
-    /* تنظیمات برای صفحه درباره ما در موبایل */
+
     body.inner-page .header {
         position: sticky;
         top: 0;
         z-index: 1000;
     }
-    
+
     body.inner-page .mission {
-        margin-top: 100px; /* برای جلوگیری از پوشیده شدن توسط هدر */
+        margin-top: 100px;
     }
 }
 
-/* ======= پایان استایل‌های جدید ======= */
 .mission {
     padding: 4rem 2rem;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
     border-radius: 20px;
     margin: 8rem auto;
-    max-width: 1500px;
+    max-width: 1300px;
     max-height: 800px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -422,7 +425,7 @@ body.menu-open {
     .slideshow-container {
         max-width: 400px;
     }
-    
+
 }
 
 @media (max-width: 480px) {
@@ -430,10 +433,13 @@ body.menu-open {
         padding: 2rem 1rem;
         margin: 1.5rem auto;
         border-radius: 15px;
-    }
+        max-width: 400px;
+        max-height: 980px;
 
+    }
     .mission-content {
-        gap: 2rem;
+        gap: 0.2rem;
+       
     }
 
     .about-h2 {
@@ -442,8 +448,9 @@ body.menu-open {
 
     .about-p {
         font-size: 0.9rem;
-        line-height: 1.6;
+        line-height: 1.9;
         padding: 1rem;
+        width: 400px;
     }
 
     .about-slide img {
@@ -452,6 +459,7 @@ body.menu-open {
 
     .slideshow-container {
         max-width: 350px;
+         margin-bottom: -20px;
     }
 
     .dot {
@@ -468,14 +476,13 @@ body.menu-open {
         font-size: 1rem;
         margin-right: 30px;
     }
-    
-    .content-summary, .creator{
+
+    .content-summary,
+    .creator {
         width: 350px;
         margin-right: 40px;
     }
-    .mission-tex{
-        width: 300px;
-    }
+
 }
 
 @media (min-width: 1600px) {

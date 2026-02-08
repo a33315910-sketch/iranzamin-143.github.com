@@ -1772,7 +1772,6 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
     }
 }
 
-/* استایل‌های تصویر برج میلاد */
 .milan-tower-container {
     position: fixed;
     left: 90px;
@@ -1836,7 +1835,6 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
     left: 40%;
 }
 
-/* انیمیشن‌ها */
 @keyframes floatTower {
     0%, 100% {
         transform: translateY(0) translateX(0);
@@ -1887,7 +1885,6 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
     }
 }
 
-/* ریسپانسیو برای موبایل */
 @media (max-width: 1200px) {
     .milan-tower-container {
         left: 20px;
@@ -1914,7 +1911,6 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
     }
 }
 
-/* انیمیشن ورود تصویر */
 @keyframes slideInLeft {
     0% {
         opacity: 0;
@@ -1930,7 +1926,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
     animation: slideInLeft 1.5s ease-out forwards, 
                floatTower 6s ease-in-out infinite 1.5s;
 }
-/* مخفی کردن برج میلاد در موبایل */
+
 @media (max-width: 768px) {
     .milan-tower-container {
         display: none !important;

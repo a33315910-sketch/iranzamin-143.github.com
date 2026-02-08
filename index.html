@@ -10,8 +10,9 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
- 
+
 </head>
+
 <body>
 
   <div id="stars-container"></div>
@@ -111,7 +112,7 @@
           <br>از کوه‌های سر به فلک کشیده تا دریاچه‌های آرام و شهرهای تاریخی،
           <br>هر مکان دیدنی را با عکس‌ها و توضیحات کامل معرفی می‌کنیم
           <br>تا تجربه‌ای واقعی از سفر در ایران داشته باشید.
-          <br><a href="about.html" class="more1-bookmark">مشاهده بیشتر</a>
+            <br><a href="about.html" class="more2-bookmark">مشاهده بیشتر</a>
         </h1>
 
         <p class="border2 fade-in-up">
@@ -119,10 +120,13 @@
           <br>مکان‌های تاریخی، طبیعت بکر و شهرهای دیدنی را کشف کنید
           <br>و سفری فراموش‌نشدنی را تجربه کنید.
           <br>ایران سرشار از شگفتی است که هر گوشه اش<br> روایتی جاودانه را در دل خود نگه داشته است.
-          <br><a href="about.html" class="more2-bookmark">مشاهده بیشتر</a>
+          <br><a
+            href="https://www.aparat.com/v/e666xsw"
+            class="more1-bookmark">مشاهده ویدیو</a>
         </p>
       </div>
     </main>
+    
     <div class="cols">
       <div id="dastebandy"></div>
       <h2 class="mahbob ">دسته بندی ها</h2>
@@ -430,7 +434,7 @@
         </h2>
 
         <ul class="footer-menu">
-          <li><a href="#home">خانه</a></li>
+          <li><a href="index.html#home">خانه</a></li>
           <li><a href="#irangardy">ایران گردی</a></li>
           <li><a href="#dastebandy">دسته بندی‌ها</a></li>
           <li><a href="about.html">درباره ما</a></li>
@@ -492,7 +496,55 @@
     </div>
   </div>
   <div id="thankYouToast" class="toast"> سپاس از شما، نظر زیبای شما ثبت شد!</div>
-
+<div class="music-player">
+    <button class="music-toggle" id="musicToggle">
+        <span class="music-emoji">🎵</span>
+        <span class="music-text">پخش موسیقی</span>
+    </button>
+    
+    <div class="music-panel" id="musicPanel">
+        <div class="panel-header">
+            <h3><span class="header-icon">🎶</span> موسیقی ایران</h3>
+            <button class="panel-close" id="panelClose">✕</button>
+        </div>
+        
+        <div class="current-track" id="currentTrack">
+            <div class="track-title" id="trackTitle">آهنگی انتخاب نشده</div>
+            <div class="track-artist" id="trackArtist"></div>
+        </div>
+        
+        <div class="player-controls">
+            <div class="control-row">
+                <button class="control-btn btn-prev" id="prevBtn" title="آهنگ قبلی">
+                    <span class="btn-icon">⏮</span>
+                </button>
+                <button class="control-btn btn-play" id="playBtn" title="پخش/توقف">
+                    <span class="btn-icon play-icon">▶</span>
+                    <span class="btn-icon pause-icon" style="display: none;">⏸</span>
+                </button>
+                <button class="control-btn btn-next" id="nextBtn" title="آهنگ بعدی">
+                    <span class="btn-icon">⏭</span>
+                </button>
+            </div>
+        </div>
+      
+        <div class="playlist-section">
+            <div class="playlist-header">
+                <h4>لیست پخش</h4>
+                <span class="song-count" id="songCount">0 آهنگ</span>
+            </div>
+            <div class="playlist" id="playlist">
+            </div>
+        </div>
+        
+        <div class="volume-control">
+            <div class="volume-icon" id="volumeIcon">🔊</div>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+            <div class="volume-value" id="volumeValue">70%</div>
+        </div>
+    </div>
+</div>
+  
   <script src="regester.js"></script>
   <script src="script.js"></script>
 </body>

@@ -1,4 +1,4 @@
-// تابع اسلاید برای کارت‌ها
+
 function slide(buttonElement, direction) {
     const wrapper = buttonElement.closest('.slider-wrapper');
     if (!wrapper) return;
@@ -15,7 +15,6 @@ function slide(buttonElement, direction) {
     });
 }
 
-// Intersection Observer برای انیمیشن‌ها
 document.addEventListener("DOMContentLoaded", function () {
     const observerOptions = {
         root: null,
@@ -37,33 +36,28 @@ document.addEventListener("DOMContentLoaded", function () {
     animatedElements.forEach((el) => observer.observe(el));
 });
 
-// ---------- مدیریت منوها ----------
-// تابع برای بستن همه منوهای باز
 function closeAllMenus() {
-    // بستن منوهای اصلی (همه صفحات)
     const menus = document.querySelectorAll('.menu.active, .menu1.active, .menu2.active');
     menus.forEach(menu => {
         menu.classList.remove('active');
     });
     
-    // بستن هامبورگر
+
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     if (hamburgerBtn) {
         hamburgerBtn.classList.remove('active');
     }
     
-    // بستن دراپ‌داون‌ها (دسکتاپ)
     const dropdowns = document.querySelectorAll('.dropdown-content.show, .dropdown-content2.show');
     dropdowns.forEach(dropdown => {
         dropdown.classList.remove('show');
     });
     
-    // حذف کلاس menu-open از body و بازگرداندن اسکرول
     document.body.classList.remove('menu-open');
     document.body.style.overflow = '';
 }
 
-// مدیریت کلیک بیرون از منو برای همه دستگاه‌ها
+
 document.addEventListener('click', function(event) {
     const hamburger = document.querySelector('.hamburger');
     const allMenus = document.querySelectorAll('.menu, .menu1, .menu2');
@@ -76,46 +70,44 @@ document.addEventListener('click', function(event) {
     let isClickOnDropdownButton = false;
     let isClickOnMobileLink = false;
     
-    // بررسی کلیک روی منوهای موبایل (همه انواع منو)
+
     allMenus.forEach(menu => {
         if (menu.contains(event.target) || menu === event.target) {
             isClickInsideMenu = true;
         }
     });
     
-    // بررسی کلیک روی دراپ‌داون‌ها
+
     dropdownContents.forEach(dropdown => {
         if (dropdown.contains(event.target) || dropdown === event.target) {
             isClickInsideDropdown = true;
         }
     });
     
-    // بررسی کلیک روی دکمه‌های دراپ‌داون
+  
     dropButtons.forEach(button => {
         if (button.contains(event.target) || button === event.target) {
             isClickOnDropdownButton = true;
         }
     });
     
-    // بررسی کلیک روی لینک‌های داخل mobile-text
     mobileTextLinks.forEach(link => {
         if (link.contains(event.target) || link === event.target) {
             isClickOnMobileLink = true;
         }
     });
     
-    // بررسی کلیک روی هامبورگر
+
     if (hamburger && hamburger.contains(event.target)) {
-        return; // اگر روی هامبورگر کلیک شده، کاری نکن
+        return; 
     }
     
-    // اگر کلیک بیرون از همه منوها و دراپ‌داون‌ها و لینک‌های mobile-text بود
+
     if (!isClickInsideMenu && !isClickInsideDropdown && !isClickOnDropdownButton && !isClickOnMobileLink) {
         closeAllMenus();
     }
 });
 
-// مدیریت کلیک روی هامبورگر (برای همه صفحات)
 document.addEventListener('DOMContentLoaded', function () {
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     
@@ -124,14 +116,14 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
             e.stopPropagation();
             
-            // برای صفحه اصلی
+    
             const mainMenu = document.getElementById('mainMenu');
-            // برای صفحه about
+
             const mainMenu1 = document.getElementById('mainMenu1');
-            // برای سایر صفحات
+    
             const mainMenu2 = document.getElementById('mainMenu2');
             
-            // پیدا کردن منوی فعال در این صفحه
+
             let activeMenu = null;
             if (mainMenu && document.body.contains(mainMenu)) {
                 activeMenu = mainMenu;
@@ -142,18 +134,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             
             if (activeMenu) {
-                // اگر منو باز است، ببندیم؛ اگر بسته است، باز کنیم
+
                 const isMenuOpen = activeMenu.classList.contains('active');
-                closeAllMenus(); // ابتدا همه منوها را ببندیم
+                closeAllMenus(); 
                 
                 if (!isMenuOpen) {
-                    // اگر منو بسته بود، آن را باز کنیم
+     
                     activeMenu.classList.add('active');
                     this.classList.add('active');
                     document.body.classList.add('menu-open');
                     document.body.style.overflow = 'hidden';
                 } else {
-                    // اگر منو باز بود، قبلاً با closeAllMenus بسته شده است
+     
                     document.body.classList.remove('menu-open');
                     document.body.style.overflow = '';
                 }
@@ -162,14 +154,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// توابع باز و بسته کردن منوهای دراپ‌داون (دسکتاپ)
 function toggleMenu() {
     const dropdown = document.getElementById("myDropdown");
     if (dropdown) {
         dropdown.classList.toggle("show");
     }
     
-    // بستن سایر دراپ‌داون‌های باز
     const otherDropdowns = document.querySelectorAll('.dropdown-content2.show');
     otherDropdowns.forEach(other => {
         if (other !== dropdown) {
@@ -177,7 +167,6 @@ function toggleMenu() {
         }
     });
     
-    // جلوگیری از انتشار رویداد (برای mobile-text)
     if (event) event.stopPropagation();
 }
 
@@ -187,7 +176,7 @@ function toggleMenu2() {
         dropdown2.classList.toggle("show");
     }
     
-    // بستن سایر دراپ‌داون‌های باز
+
     const otherDropdowns = document.querySelectorAll('.dropdown-content.show');
     otherDropdowns.forEach(other => {
         if (other !== dropdown2) {
@@ -195,26 +184,22 @@ function toggleMenu2() {
         }
     });
     
-    // جلوگیری از انتشار رویداد (برای mobile-text)
+
     if (event) event.stopPropagation();
 }
-
-// مدیریت کلیک روی لینک‌های داخل منو در موبایل
 document.addEventListener('click', function(event) {
-    // اگر روی لینک داخل منو کلیک شد و در موبایل هستیم
     if (window.innerWidth <= 1024) {
-        // بررسی کلیک روی هر نوع لینک داخل منوها
         const clickedLink = event.target.closest('.menu a, .menu1 a, .menu2 a, .dropdown-content a, .dropdown-content2 a');
         
         if (clickedLink) {
-            // فقط اگر لینک href معتبر دارد
+
             if (clickedLink.getAttribute('href') && !clickedLink.getAttribute('href').startsWith('#')) {
-                // تاخیر کوتاه برای نمایش انیمیشن بسته شدن
+    
                 setTimeout(() => {
                     closeAllMenus();
                 }, 300);
             } else if (clickedLink.getAttribute('href') && clickedLink.getAttribute('href').startsWith('#')) {
-                // اگر لینک داخلی (به قسمت‌های همان صفحه) است
+        
                 setTimeout(() => {
                     closeAllMenus();
                 }, 300);
@@ -223,14 +208,12 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// بستن منوها با کلید Escape
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeAllMenus();
     }
 });
 
-// بستن منو هنگام اسکرول (برای موبایل)
 let scrollTimeout;
 window.addEventListener('scroll', function() {
     if (window.innerWidth <= 1024) {
@@ -241,18 +224,15 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// مدیریت تغییر اندازه ویندو
 window.addEventListener('resize', function() {
-    // اگر از موبایل به دسکتاپ تغییر اندازه دادیم، منوهای موبایل را ببندیم
+
     if (window.innerWidth > 1024) {
         closeAllMenus();
     }
-    
-    // اجرای مجدد تابع reveal برای تنظیم مجدد انیمیشن‌ها
+
     reveal();
 });
 
-// ---------- انیمیشن reveal ----------
 window.addEventListener('scroll', reveal);
 
 function reveal() {
@@ -270,14 +250,13 @@ function reveal() {
         }
     }
 }
-// اجرای اولیه
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', reveal);
 } else {
     reveal();
 }
 
-// ---------- ستاره‌های متحرک ----------
 document.addEventListener('DOMContentLoaded', function () {
     const container = document.getElementById('stars-container');
     if (!container) return;
@@ -309,7 +288,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// ---------- انیمیشن fade-in-up ----------
 document.addEventListener('DOMContentLoaded', function () {
     const elements = document.querySelectorAll('.fade-in-up');
 
@@ -320,12 +298,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// ---------- جستجو ----------
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchinput');
     const searchIcon = document.getElementById('search-icon');
 
-    if (!searchInput || !searchIcon) return; // اگر در صفحه about نباشیم
+    if (!searchInput || !searchIcon) return; 
     
     const bookmarks = {
         "تخت جمشید": "city.html#takht",
@@ -383,7 +360,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// ---------- اسلایدشوی درباره ما ----------
 document.addEventListener('DOMContentLoaded', function () {
     const slideshowContainer = document.querySelector('.mission .slideshow-container');
 
@@ -431,7 +407,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// ---------- فرم نظر سنجی ----------
 document.addEventListener('DOMContentLoaded', function () {
     const surveyBtn = document.getElementById("surveyBtn");
     const surveyModal = document.getElementById("surveyModal");
@@ -473,8 +448,250 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// مقداردهی اولیه
 document.addEventListener('DOMContentLoaded', function() {
-    // بستن منوها در ابتدا
+
     closeAllMenus();
+});
+
+class MusicPlayer {
+    constructor() {
+        this.playlist = [
+            {
+                id: 1,
+                name: "سرود ملی",
+                artist: "ساعد باقری",
+                file: "musics/31.mp3",
+                duration: "5:15"
+            },
+            {
+                id: 2,
+                name: "ایران جوان",
+                artist: "سالار عقیلی",
+                file: "musics/Salar Aghili - Irane Javan (320).mp3",
+                duration: "4:30"
+            },
+            {
+                id: 3,
+                name: "وطنم",
+                artist: "حجت اشرف‌زاده",
+                file: "musics/Hojat Ashrafzade - Vatanam (128).mp3",
+                duration: "3:45"
+            },
+         
+            {
+                 id: 4,
+                name: "سپیده",
+                artist: "محمدرضا شجریان",
+                 file: "musics/MohammadReza Shajaryan - Sepide (128).mp3",
+                 duration: "4:00"
+             }
+        ];
+        
+        this.currentIndex = 0;
+        this.audio = new Audio();
+        this.isPlaying = false;
+        this.volume = 0.7;
+        
+        this.init();
+    }
+    
+    init() {
+        this.setupElements();
+        this.setupEvents();
+        this.renderPlaylist();
+        this.updateSongCount();
+    }
+    
+    setupElements() {
+        this.elements = {
+            musicToggle: document.getElementById('musicToggle'),
+            musicPanel: document.getElementById('musicPanel'),
+            panelClose: document.getElementById('panelClose'),
+            trackTitle: document.getElementById('trackTitle'),
+            trackArtist: document.getElementById('trackArtist'),
+            playBtn: document.getElementById('playBtn'),
+            prevBtn: document.getElementById('prevBtn'),
+            nextBtn: document.getElementById('nextBtn'),
+            playlist: document.getElementById('playlist'),
+            songCount: document.getElementById('songCount'),
+            volumeSlider: document.getElementById('volumeSlider'),
+            volumeValue: document.getElementById('volumeValue'),
+            volumeIcon: document.getElementById('volumeIcon')
+        };
+    }
+    
+    setupEvents() {
+
+        this.elements.musicToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.togglePanel();
+        });
+        
+        this.elements.panelClose.addEventListener('click', () => {
+            this.hidePanel();
+        });
+        
+        document.addEventListener('click', (e) => {
+            if (!this.elements.musicPanel.contains(e.target) && 
+                !this.elements.musicToggle.contains(e.target)) {
+                this.hidePanel();
+            }
+        });
+        
+        this.elements.playBtn.addEventListener('click', () => this.togglePlay());
+        this.elements.prevBtn.addEventListener('click', () => this.prevSong());
+        this.elements.nextBtn.addEventListener('click', () => this.nextSong());
+ 
+        this.elements.volumeSlider.addEventListener('input', (e) => {
+            this.setVolume(e.target.value);
+        });
+
+        this.audio.addEventListener('play', () => this.onPlay());
+        this.audio.addEventListener('pause', () => this.onPause());
+        this.audio.addEventListener('ended', () => this.nextSong());
+        this.audio.addEventListener('volumechange', () => this.updateVolumeIcon());
+    }
+    
+    togglePanel() {
+        this.elements.musicPanel.classList.toggle('show');
+    }
+    
+    hidePanel() {
+        this.elements.musicPanel.classList.remove('show');
+    }
+    
+    renderPlaylist() {
+        this.elements.playlist.innerHTML = '';
+        
+        this.playlist.forEach((song, index) => {
+            const songItem = document.createElement('div');
+            songItem.className = `song-item ${index === this.currentIndex ? 'playing' : ''}`;
+            songItem.innerHTML = `
+                <div class="song-index">${index + 1}</div>
+                <div class="song-info">
+                    <div class="song-name">${song.name}</div>
+                    <div class="song-singer">${song.artist}</div>
+                </div>
+                <div class="song-duration">${song.duration}</div>
+            `;
+            
+            songItem.addEventListener('click', () => this.playSong(index));
+            this.elements.playlist.appendChild(songItem);
+        });
+    }
+    
+    updateSongCount() {
+        this.elements.songCount.textContent = `${this.playlist.length} آهنگ`;
+    }
+    
+    playSong(index) {
+        if (index < 0 || index >= this.playlist.length) return;
+        
+        this.currentIndex = index;
+        const song = this.playlist[index];
+        
+        this.elements.trackTitle.textContent = song.name;
+        this.elements.trackArtist.textContent = song.artist;
+        
+        this.audio.src = song.file;
+        this.audio.volume = this.volume;
+        
+        this.audio.play()
+            .then(() => {
+                this.isPlaying = true;
+                this.updatePlayButton();
+                this.renderPlaylist();
+            })
+            .catch(error => {
+                console.error('خطا در پخش موسیقی:', error);
+                alert(`خطا در پخش آهنگ:\n${song.file}\n\nمطمئن شوید فایل وجود دارد.`);
+            });
+    }
+    
+    togglePlay() {
+        if (!this.audio.src) {
+
+            this.playSong(0);
+            return;
+        }
+        
+        if (this.isPlaying) {
+            this.audio.pause();
+        } else {
+            this.audio.play();
+        }
+    }
+    
+    onPlay() {
+        this.isPlaying = true;
+        this.updatePlayButton();
+    }
+    
+    onPause() {
+        this.isPlaying = false;
+        this.updatePlayButton();
+    }
+    
+    updatePlayButton() {
+        const playIcon = this.elements.playBtn.querySelector('.play-icon');
+        const pauseIcon = this.elements.playBtn.querySelector('.pause-icon');
+        
+        if (this.isPlaying) {
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+        } else {
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+        }
+    }
+    
+    prevSong() {
+        const prevIndex = (this.currentIndex - 1 + this.playlist.length) % this.playlist.length;
+        this.playSong(prevIndex);
+    }
+    
+    nextSong() {
+        const nextIndex = (this.currentIndex + 1) % this.playlist.length;
+        this.playSong(nextIndex);
+    }
+    
+    setVolume(value) {
+        this.volume = parseFloat(value);
+        this.audio.volume = this.volume;
+        this.elements.volumeValue.textContent = `${Math.round(this.volume * 100)}%`;
+        this.updateVolumeIcon();
+    }
+    
+    updateVolumeIcon() {
+        if (this.volume === 0) {
+            this.elements.volumeIcon.textContent = '🔇';
+        } else if (this.volume < 0.3) {
+            this.elements.volumeIcon.textContent = '🔈';
+        } else if (this.volume < 0.7) {
+            this.elements.volumeIcon.textContent = '🔉';
+        } else {
+            this.elements.volumeIcon.textContent = '🔊';
+        }
+    }
+    
+    addSong(name, artist, filePath, duration = "3:00") {
+        const newSong = {
+            id: this.playlist.length + 1,
+            name: name,
+            artist: artist,
+            file: filePath,
+            duration: duration
+        };
+        
+        this.playlist.push(newSong);
+        this.renderPlaylist();
+        this.updateSongCount();
+        
+        console.log(`✅ آهنگ "${name}" اضافه شد`);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.musicPlayer = new MusicPlayer();
+  
 });
